@@ -1,26 +1,25 @@
-# MVVM To-Do List Flutter Application
 
-## Overview
 
-This project demonstrates the **MVVM (Model-View-ViewModel)** design pattern using Flutter. The app is a simple To-Do List that allows users to:
+## AFL Assignment: Unit Testing with AAA Pattern
 
-- View a list of tasks.
-- Add new tasks.
-- Mark tasks as completed.
-- Delete tasks.
+### Chosen Function
+The function `formatPhoneNumber` formats a 10-digit phone number string into the format `(123) 456-7890`. If the input is not exactly 10 digits or contains non-numeric characters, it returns "Invalid number".
 
-### MVVM Components:
+### AAA Pattern Used in Testing
+We used the **Arrange-Act-Assert (AAA)** pattern to write clear and structured test cases:
 
-- **Model:** Represents the Task data and handles task storage (via `Task` and `TaskRepository`).
-- **View:** The Flutter UI widgets displaying the task list and task creation screen.
-- **ViewModel:** Manages state and business logic (adding, updating, deleting tasks) using `ChangeNotifier` and the `provider` package.
+- **Arrange:** Set up input data like valid or invalid phone numbers.
+- **Act:** Call the `formatPhoneNumber` function with the test input.
+- **Assert:** Use `expect` to verify that the function's output matches the expected result.
 
-## How to Run
+### Scenarios Covered
+- A valid 10-digit number.
+- An invalid number with fewer digits.
+- An invalid string with non-digit characters.
 
-1. Clone this repository.
-2. Run `flutter pub get` to install dependencies.
-3. Run the app using `flutter run`.
+This test demonstrates proper input handling, correct string formatting, and robust validation logic, ensuring the function behaves as expected.
 
-## Reflection
-
-See the attached [MVVM_Research_Reflection.pdf](./MVVM_Research_Reflection.pdf) for the design pattern research and personal reflection.
+To run the test:
+```bash
+flutter test test/formatter_test.dart
+```
