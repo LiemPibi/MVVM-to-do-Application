@@ -1,0 +1,18 @@
+name: flutter_unit_test_example
+description: A simple Flutter to-do list app with unit testing and MVVM architecture.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
